@@ -47,8 +47,16 @@ public class FlightFind {
 		new Highlighter().getcolor(driver, flights.getToday(), "green", "red");
 		today.selectByIndex(6);
 
+		new Highlighter().getcolor(driver, flights.getfirstClass(), "green", "red");
+		flights.getfirstClass().click();
+				
+		new Highlighter().getcolor(driver, flights.getAirLine(), "green", "red");
+		
+		Select airLine = new Select(flights.getAirLine());
+		airLine.selectByVisibleText("Unified Airlines");			
+
 		new Highlighter().getcolor(driver, flights.getContBtn(), "green", "red");
-		flights.getContBtn().click();
+		flights.getContBtn().click();		
 
 		return driver;
 	}

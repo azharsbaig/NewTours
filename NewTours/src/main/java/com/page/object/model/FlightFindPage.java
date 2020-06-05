@@ -34,8 +34,14 @@ public class FlightFindPage {
 		private WebElement today;
 		
 		@FindBy(xpath="//input[@value='First']")
-		private WebElement contBtn;
+		private WebElement firstClass;
 
+		@FindBy(xpath="//select[@name='airline']")
+		private WebElement airLine;		
+		
+		@FindBy(xpath="//input[@name='findFlights']")
+		private WebElement contBtn; 
+		
 		public WebElement getFlights() {
 			return flights;
 		}
@@ -67,8 +73,16 @@ public class FlightFindPage {
 		public WebElement getToday() {
 			return today;
 		}
-
+		
+		public WebElement getfirstClass() {
+			return firstClass;			
+		}
+		
+		public WebElement getAirLine() {
+			return airLine;
+		}	
+		
 		public WebElement getContBtn() {
 			return contBtn;
-		}		
+		}
 }
