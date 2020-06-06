@@ -9,7 +9,7 @@ public class FlightFindPage {
 	public FlightFindPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}	
-		@FindBy(xpath="//input[@value='oneway']")
+		@FindBy(xpath="//input[@value='roundtrip']")
 		private WebElement flights;
 		
 		@FindBy(xpath="//select[@name='passCount']")

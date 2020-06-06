@@ -6,16 +6,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.page.object.model.FlightFindPage;
+//import com.util.Wait;
 import com.utils.Highlighter;
 
 public class FlightFind {
 	static WebDriver driver;
 
-	public static WebDriver getFlightFindPage(WebDriver driver) {
+	public static WebDriver getFlightFindPage(WebDriver driver) throws Throwable {
 
-		FlightFindPage flights = new FlightFindPage(driver);
+		FlightFindPage flights = new FlightFindPage(driver);		
+
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
 
 		new Highlighter().getcolor(driver, flights.getFlights(), "green", "red");
+		Thread.sleep(2000);//new Wait().getExplicitWait(driver, flights.getFlights());
 		flights.getFlights().click();
 
 		Select pcount = new Select(flights.getPcount());
@@ -37,7 +42,6 @@ public class FlightFind {
 		Select airport = new Select(flights.getAirport());
 		new Highlighter().getcolor(driver, flights.getAirport(), "green", "red");
 		airport.selectByVisibleText("San Francisco");
-
 		
 		Select tomonth = new Select(flights.getTomonth());
 		new Highlighter().getcolor(driver, flights.getTomonth(), "green", "red");

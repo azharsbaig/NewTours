@@ -12,7 +12,10 @@ public class SelectFlight {
 	static WebDriver driver;
 
 	public static WebDriver getSelectFlightPag(WebDriver driver) {
-		SelectFlightPage sf = new SelectFlightPage(driver);
+		SelectFlightPage sf = new SelectFlightPage(driver);		
+
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
 
 		new Highlighter().getcolor(driver, sf.getDepFlight(), "green", "red");
 		sf.getDepFlight().click();

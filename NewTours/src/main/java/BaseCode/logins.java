@@ -39,12 +39,9 @@ public class logins {
 	logins.getPass().sendKeys(BasicConfig.getconfig("pass"));
 	
 	new Highlighter().getcolor(driver, logins.getSignin(),"green", "red");
-	logins.getSignin().click();
+	logins.getSignin().click();	
 	
-	
-	
-	return driver;
-	
+	return driver;	
 
 }
 }

@@ -37,8 +37,6 @@ public class TakeAppScreenShot {
 			e.printStackTrace();
 		}
 
-		// System.out.println("Screen shot taken");
-
 		return destination;
 
 	}
@@ -58,10 +56,7 @@ public class TakeAppScreenShot {
 				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				
-			}
-			
-		      
-			//Arrays.stream(new File("./Screen Shot").listFiles()).forEach(File::delete);
+			}			
 	}
 
 }
